@@ -135,7 +135,7 @@ publications:
     papers:
       - title: Text-driven Visual Synthesis with Latent Diffusion Prior
         link: 
-        intro: "../assets/images/videogan_teaser.gif"
+        intro: "../assets/images/diffusion-prior-teaser.png"
         authors: Ting-Hsuan Liao, Songwei Ge, __Yiran Xu__, Yao-Chih Lee, Badour AlBahar, Jia-Bin Huang
         conference: Preprint [[paper](https://arxiv.org/abs/2302.08510) / [project page](https://latent-diffusion-prior.github.io/)]
         details: We propose a flow-based method to improve the temporal consistency in GAN-based video editing.
