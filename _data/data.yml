@@ -133,6 +133,13 @@ publications:
     title: Publications
     intro: |
     papers:
+      - title: "In-N-Out: Face Video Inversion and Editing with Volumetric Decomposition"
+        link: 
+        intro: "../assets/images/in-n-out-teaser.png"
+        authors: __Yiran Xu__, Zhixin Shu, Cameron Smith, Jia-Bin Huang, Seoung Wug Oh
+        conference: Preprint [[paper](http://arxiv.org/abs/2302.04871) / [project page](https://in-n-out-3d.github.io/)]
+        details: We propose to GAN inversion approach by decomposing data with Out-of-distribution objects into two radiance fields.
+
       - title: Text-driven Visual Synthesis with Latent Diffusion Prior
         link: 
         intro: "../assets/images/diffusion-prior-teaser.png"
