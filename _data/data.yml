@@ -138,7 +138,7 @@ publications:
         intro: "../assets/images/in-n-out-teaser.gif"
         authors: __Yiran Xu__, Zhixin Shu, Cameron Smith, Seoung Wug Oh, Jia-Bin Huang
         conference: CVPR 2024 [[paper](http://arxiv.org/abs/2302.04871) / [project page](https://in-n-out-3d.github.io/)]
-        details: We propose to GAN inversion approach by decomposing data with Out-of-distribution objects into two radiance fields.
+        details: We propose a GAN inversion approach by decomposing data with Out-of-distribution objects into two radiance fields.
       
       - title: "Dynamic Mesh-Aware Radiance Fields"
         link: 
