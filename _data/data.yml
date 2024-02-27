@@ -144,7 +144,7 @@ publications:
         link: 
         intro: "../assets/images/dmrf.gif"
         authors: Yi-Ling Qiao*, Alexander Gao*, __Yiran Xu__, Yue Feng, Jia-Bin Huang, Ming C. Lin
-        conference: ICCV 2023 [[paper](https://arxiv.org/abs/2309.04581) / [project page](https://mesh-aware-rf.github.io/)] / [code](https://github.com/YilingQiao/DMRF)]
+        conference: ICCV 2023 [[paper](https://arxiv.org/abs/2309.04581) / [project page](https://mesh-aware-rf.github.io/) / [code](https://github.com/YilingQiao/DMRF)]
         details: We propose to GAN inversion approach by decomposing data with Out-of-distribution objects into two radiance fields.
 
       - title: Text-driven Visual Synthesis with Latent Diffusion Prior
