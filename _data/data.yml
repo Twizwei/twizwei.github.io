@@ -137,7 +137,14 @@ publications:
         link: 
         intro: "../assets/images/in-n-out-teaser.gif"
         authors: __Yiran Xu__, Zhixin Shu, Cameron Smith, Jia-Bin Huang, Seoung Wug Oh
-        conference: Preprint [[paper](http://arxiv.org/abs/2302.04871) / [project page](https://in-n-out-3d.github.io/)]
+        conference: CVPR 2024 [[paper](http://arxiv.org/abs/2302.04871) / [project page](https://in-n-out-3d.github.io/)]
+        details: We propose to GAN inversion approach by decomposing data with Out-of-distribution objects into two radiance fields.
+      
+      - title: "Dynamic Mesh-Aware Radiance Fields"
+        link: 
+        intro: "../assets/images/dmrf.gif"
+        authors: Yi-Ling Qiao*, Alexander Gao*, __Yiran Xu__, Yue Feng, Jia-Bin Huang, Ming C. Lin
+        conference: ICCV 2023 [[paper](https://arxiv.org/abs/2309.04581) / [project page](https://mesh-aware-rf.github.io/)] / [code] (https://github.com/YilingQiao/DMRF)
         details: We propose to GAN inversion approach by decomposing data with Out-of-distribution objects into two radiance fields.
 
       - title: Text-driven Visual Synthesis with Latent Diffusion Prior
