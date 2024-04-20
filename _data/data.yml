@@ -139,6 +139,13 @@ publications:
     title: Publications
     intro: |
     papers:
+      - title: "VideoGigaGAN: Towards Detail-rich Video Super-Resolution"
+        link: 
+        intro: "../assets/images/videogigagan_teaser.gif"
+        authors: Yiran Xu, Taesung Park, Richard Zhang, Yang Zhou, Eli Shechtman, Feng Liu, Jia-Bin Huang, Difan Liu
+        conference: Preprint 2024 [[paper](https://arxiv.org/pdf/2404.12388) / [project page](https://videogigagan.github.io/)]
+        details: We propose VideoGigaGAN, a generic Video Super-Resolution model that achieves both temporal consistency and rich details.
+
       - title: "In-N-Out: Face Video Inversion and Editing with Volumetric Decomposition"
         link: 
         intro: "../assets/images/in-n-out-teaser.gif"
