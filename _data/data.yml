@@ -146,7 +146,7 @@ publications:
         conference: Preprint 2024 [[paper](https://arxiv.org/pdf/2404.12388) / [project page](https://videogigagan.github.io/)]
         details: We propose VideoGigaGAN, a generic Video Super-Resolution model that achieves both temporal consistency and rich details.
 
-      - title: "In-N-Out: Face Video Inversion and Editing with Volumetric Decomposition"
+      - title: "In-N-Out: Faithful 3D GAN Inversion with Volumetric Decomposition for Face Editing"
         link: 
         intro: "../assets/images/in-n-out-teaser.gif"
         authors: __Yiran Xu__, Zhixin Shu, Cameron Smith, Seoung Wug Oh, Jia-Bin Huang
