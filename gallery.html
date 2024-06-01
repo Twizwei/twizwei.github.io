@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
+    <style>
+        .img-thumbnail {
+            transition: transform 0.2s ease;
+        }
+
+        .img-thumbnail:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+    <title>Photo Gallery</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="margin-top: 3em;">
+            <div class="col-sm-12" style="margin-bottom: 1em;">
+                <h3 class="display-4" style="text-align: center;"><span style="font-weight: bold;">Photo</span> Gallery</h3>
+            </div>
+        </div>
+
+        <!-- Back to Homepage -->
+        <div class="row">
+            <div class="col-sm-12" style="margin-bottom: 1em;">
+                <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Homepage</a>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group" id="category-list">
+                    <a href="#" class="list-group-item list-group-item-action active" data-category="cherryblossom">Cherry Blossom, Tidal Basin, USA (2024)</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-category="milkyway">Milky Way, California, USA (2024)</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-category="egypt">Egypt (2023)</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-category="hengyang">Mountains May Depart, Hengyang, China (2017)</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-category="silkroad">Silk Road, Northwestern China (2015)</a>
+                </div>
+            </div>
+
+            <!-- Gallery -->
+            <div class="col-md-9">
+                <div id="gallery" class="row">
+                    <!-- cherryblossom Category -->
+                    <div class="col-md-4 mb-4 category cherryblossom">
+                        <a href="assets/gallery/cherryblossom1.jpg" data-lightbox="cherryblossom"><img src="assets/gallery/cherryblossom1.jpg" class="img-fluid img-thumbnail" alt="cherryblossom Photo 1"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category cherryblossom">
+                        <a href="assets/gallery/cherryblossom2.jpg" data-lightbox="cherryblossom"><img src="assets/gallery/cherryblossom2.jpg" class="img-fluid img-thumbnail" alt="cherryblossom Photo 2"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category cherryblossom">
+                        <a href="assets/gallery/cherryblossom3.jpg" data-lightbox="cherryblossom"><img src="assets/gallery/cherryblossom3.jpg" class="img-fluid img-thumbnail" alt="cherryblossom Photo 3"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category cherryblossom">
+                        <a href="assets/gallery/cherryblossom4.jpg" data-lightbox="cherryblossom"><img src="assets/gallery/cherryblossom4.jpg" class="img-fluid img-thumbnail" alt="cherryblossom Photo 4"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category cherryblossom">
+                        <a href="assets/gallery/cherryblossom5.jpg" data-lightbox="cherryblossom"><img src="assets/gallery/cherryblossom5.jpg" class="img-fluid img-thumbnail" alt="cherryblossom Photo 5"></a>
+                    </div>
+
+                    <!-- milkyway Category -->
+                    <div class="col-md-4 mb-4 category milkyway d-none">
+                        <a href="assets/gallery/milkyway1.jpg" data-lightbox="milkyway"><img src="assets/gallery/milkyway1.jpg" class="img-fluid img-thumbnail" alt="Milky Way Photo 1"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category milkyway d-none">
+                        <a href="assets/gallery/milkyway2.jpg" data-lightbox="milkyway"><img src="assets/gallery/milkyway2.jpg" class="img-fluid img-thumbnail" alt="Milky Way Photo 2"></a>
+                    </div>
+
+                    <!-- egypt Category -->
+                    <div class="col-md-4 mb-4 category egypt d-none">
+                        <a href="assets/gallery/egypt1.jpg" data-lightbox="egypt"><img src="assets/gallery/egypt1.jpg" class="img-fluid img-thumbnail" alt="Egypt Photo 1"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category egypt d-none">
+                        <a href="assets/gallery/egypt2.jpg" data-lightbox="egypt"><img src="assets/gallery/egypt2.jpg" class="img-fluid img-thumbnail" alt="Egypt Photo 2"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category egypt d-none">
+                        <a href="assets/gallery/egypt3.jpg" data-lightbox="egypt"><img src="assets/gallery/egypt3.jpg" class="img-fluid img-thumbnail" alt="Egypt Photo 3"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category egypt d-none">
+                        <a href="assets/gallery/egypt4.jpg" data-lightbox="egypt"><img src="assets/gallery/egypt4.jpg" class="img-fluid img-thumbnail" alt="Egypt Photo 4"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category egypt d-none">
+                        <a href="assets/gallery/egypt5.jpg" data-lightbox="egypt"><img src="assets/gallery/egypt5.jpg" class="img-fluid img-thumbnail" alt="Egypt Photo 5"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category egypt d-none">
+                        <a href="assets/gallery/egypt6.jpg" data-lightbox="egypt"><img src="assets/gallery/egypt6.jpg" class="img-fluid img-thumbnail" alt="Egypt Photo 6"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category egypt d-none">
+                        <a href="assets/gallery/egypt7.jpg" data-lightbox="egypt"><img src="assets/gallery/egypt7.jpg" class="img-fluid img-thumbnail" alt="Egypt Photo 7"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category egypt d-none">
+                        <a href="assets/gallery/egypt8.jpg" data-lightbox="egypt"><img src="assets/gallery/egypt8.jpg" class="img-fluid img-thumbnail" alt="Egypt Photo 8"></a>
+                    </div>
+
+                    <!-- hengyang Category -->
+                    <div class="col-md-4 mb-4 category hengyang d-none">
+                        <a href="assets/gallery/hengyang1.jpg" data-lightbox="hengyang"><img src="assets/gallery/hengyang1.jpg" class="img-fluid img-thumbnail" alt="Hengyang Photo 1"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category hengyang d-none">
+                        <a href="assets/gallery/hengyang2.jpg" data-lightbox="hengyang"><img src="assets/gallery/hengyang2.jpg" class="img-fluid img-thumbnail" alt="Hengyang Photo 2"></a>
+                    </div>
+
+                    <!-- silkroad Category -->
+                    <div class="col-md-4 mb-4 category silkroad d-none">
+                        <a href="assets/gallery/silkroad1.jpg" data-lightbox="silkroad"><img src="assets/gallery/silkroad1.jpg" class="img-fluid img-thumbnail" alt="Silk Road Photo 1"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category silkroad d-none">
+                        <a href="assets/gallery/silkroad2.jpg" data-lightbox="silkroad"><img src="assets/gallery/silkroad2.jpg" class="img-fluid img-thumbnail" alt="Silk Road Photo 2"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category silkroad d-none">
+                        <a href="assets/gallery/silkroad3.jpg" data-lightbox="silkroad"><img src="assets/gallery/silkroad3.jpg" class="img-fluid img-thumbnail" alt="Silk Road Photo 3"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category silkroad d-none">
+                        <a href="assets/gallery/silkroad4.jpg" data-lightbox="silkroad"><img src="assets/gallery/silkroad4.jpg" class="img-fluid img-thumbnail" alt="Silk Road Photo 4"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category silkroad d-none">
+                        <a href="assets/gallery/silkroad5.jpg" data-lightbox="silkroad"><img src="assets/gallery/silkroad5.jpg" class="img-fluid img-thumbnail" alt="Silk Road Photo 5"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category silkroad d-none">
+                        <a href="assets/gallery/silkroad6.jpg" data-lightbox="silkroad"><img src="assets/gallery/silkroad6.jpg" class="img-fluid img-thumbnail" alt="Silk Road Photo 6"></a>
+                    </div>
+                    <div class="col-md-4 mb-4 category silkroad d-none">
+                        <a href="assets/gallery/silkroad7.jpg" data-lightbox="silkroad"><img src="assets/gallery/silkroad7.jpg" class="img-fluid img-thumbnail" alt="Silk Road Photo 7"></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <script>
+        document.querySelectorAll('#category-list a').forEach(function (element) {
+            element.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelectorAll('#category-list a').forEach(function (el) {
+                    el.classList.remove('active');
+                });
+                this.classList.add('active');
+                const category = this.getAttribute('data-category');
+                document.querySelectorAll('.category').forEach(function (el) {
+                    el.classList.add('d-none');
+                    if (el.classList.contains(category)) {
+                        el.classList.remove('d-none');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

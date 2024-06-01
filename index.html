@@ -1,18 +1,128 @@
----
-layout: default
----
 
+    <!doctype html>
+<html lang="en">
 
-{% include career-profile.html %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-{% include publications.html %}
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-{% include industry.html %}
+  <title>Yiran Xu</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
 
-{% unless site.data.data.sidebar.education %}
-  {% include education.html %}
-{% endunless %}
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="row" style="margin-top: 3em;">
+                    <div class="col-sm-12" style="margin-bottom: 1em;">
+                    <h3 class="display-4" style="text-align: center;"><span style="font-weight: bold;">Yiran</span> Xu</h3>
+                    </div>
+                    <br>
+                    <div class="col-md-10" style="">
+                        
+                <p>
+                    I am a Ph.D candidate at <a href="https://umd.edu/">University of Maryland, College Park</a> 
+					working with Prof. <a href="https://filebox.ece.vt.edu/~jbhuang/">Jia-Bin Huang</a>. 
+					I obtained my M.S. degree from <a href="http://www.ece.ucsd.edu/">UC San Diego</a>, advised by Prof. <a href="http://www.svcl.ucsd.edu/~nuno/">Nuno Vasconcelos</a>, 
+					and my B.E. degree from <a href="https://en.scut.edu.cn/">South China University of Technology (SCUT)</a>, advised by Prof. <a href="https://sdgc.stanford.edu/person/junbo-zhang">Junbo Zhang</a>, respectively.
+				</p>
+                <p>
+                    My research interests lie in computer vision and machine learning, with a focus on generative models and their applications,
+                    especially in <b>videos</b>.
+                </p>
+                <p>
+                    I used to intern at <sup><img src="./assets/img/adobe_logo.png" width="15"/></sup><a href="https://research.adobe.com/">Adobe Research</a> and 
+                    <sup><img src="./assets/img/snapchat-logo.svg" width="20"/></sup><a href="https://research.snap.com/">Snap Research</a> and was lucky to collaborate with many talented researchers.
+                </p>
+                <p>
+                    I am also a rookie in photography. Check out some of my <a href="./gallery.html">photos</a>!
+                </p>
+                <p>
+                    <a href="./assets/other/bio.txt" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-graduation-cap"></i> Bio</a>
+                    <a href="./assets/pdf/Yiran_CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa fa-address-card fa-lg"></i> CV</a>
+                    <a href="mailto:yiranx@umd.edu" style="margin-right: 5px"><i class="far fa-envelope-open fa-lg"></i> Mail</a>
+                    <a href="https://twitter.com/@Xu_Arthas" target="_blank" style="margin-right: 5px"><i class="fab fa-twitter fa-lg"></i> Twitter</a>
+                    <a href="https://scholar.google.com/citations?user=lyDM3ugAAAAJ&hl=en" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-book"></i> Scholar</a>
+                    <a href="http://github.com/twizwei" target="_blank" style="margin-right: 5px"><i class="fab fa-github fa-lg"></i> Github</a>
+                    <a href="https://www.linkedin.com/in/yiran-xu-55683816b/" target="_blank" style="margin-right: 5px"><i class="fab fa-linkedin fa-lg"></i> LinkedIn</a>
+                </p>
+    
+                    </div>
+                    <div class="col-md-2" style="">
+                        <img src="assets/img/profile.jpg" class="img-thumbnail" width="280px" alt="Profile picture">
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 1em;">
+                    <div class="col-sm-12" style="">
+                        <h4>Publications</h4>
+                        <div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/videogigagan_teaser.gif" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://videogigagan.github.io/" target="_blank">VideoGigaGAN: Towards Detail-rich Video Super-Resolution</a> <br>Yiran Xu, <a href="https://taesung.me/" target="_blank">Taesung Park</a>, <a href="https://richzhang.github.io/" target="_blank">Richard Zhang</a>, <a href="https://yzhou359.github.io/" target="_blank">Yang Zhou</a>, <a href="https://research.adobe.com/person/eli-shechtman/" target="_blank">Eli Shechtman</a>, <a href="https://pages.cs.wisc.edu/~fliu/" target="_blank">Feng Liu</a>, <a href="https://jbhuang0604.github.io/" target="_blank">Jia-Bin Huang</a>, <a href="https://difanliu.github.io/" target="_blank">Difan Liu</a> <br><span style="font-style: italic;">arXiv.org</span>, 2024 <br><a href="https://videogigagan.github.io/" target="_blank">Project Page</a> / <a href="https://arxiv.org/abs/2404.12388" target="_blank">Paper</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsexu2024videogigagan" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsexu2024videogigagan"><div class="card card-body"><pre><code>@InProceedings{xu2024videogigagan, 
+	author = {Yiran Xu and Taesung Park and Richard Zhang and Yang Zhou and Eli Shechtman and Feng Liu and Jia-Bin Huang and Difan Liu}, 
+	title = {VideoGigaGAN: Towards Detail-rich Video Super-Resolution}, 
+	booktitle = {arXiv.org}, 
+	year = {2024}, 
+}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/in-n-out-teaser.gif" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://in-n-out-3d.github.io/" target="_blank">In-N-Out: Faithful 3D GAN Inversion with Volumetric Decomposition for Face Editing</a> <br>Yiran Xu, <a href="https://zhixinshu.github.io/" target="_blank">Zhixin Shu</a>, <a href="https://research.adobe.com/person/cameron-smith/" target="_blank">Cameron Smith</a>, Seoung Oh, <a href="https://jbhuang0604.github.io/" target="_blank">Jia-Bin Huang</a> <br><span style="font-style: italic;">CVPR</span>, 2024 <br><a href="https://in-n-out-3d.github.io/" target="_blank">Project Page</a> / <a href="http://arxiv.org/abs/2302.04871" target="_blank">Paper</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsexu2024innout" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsexu2024innout"><div class="card card-body"><pre><code>@InProceedings{xu2024innout, 
+	author = {Yiran Xu and Zhixin Shu and Cameron Smith and Seoung Oh and Jia-Bin Huang}, 
+	title = {In-N-Out: Faithful 3D GAN Inversion with Volumetric Decomposition for Face Editing}, 
+	booktitle = {CVPR}, 
+	year = {2024}, 
+}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/dmrf.gif" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://mesh-aware-rf.github.io/" target="_blank">Dynamic mesh-aware radiance fields</a> <br><a href="https://ylqiao.net/" target="_blank">Yi-Ling Qiao</a>, <a href="https://www.alexandergao.com/" target="_blank">Alexander Gao</a>, Yiran Xu, <a href="https://yuefeng21.github.io/" target="_blank">Yue Feng</a>, <a href="https://jbhuang0604.github.io/" target="_blank">Jia-Bin Huang</a>, Ming Lin <br><span style="font-style: italic;">ICCV</span>, 2023 <br><a href="https://mesh-aware-rf.github.io/" target="_blank">Project Page</a> / <a href="https://arxiv.org/abs/2309.04581" target="_blank">Paper</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseqiao2023dynamic" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapseqiao2023dynamic"><div class="card card-body"><pre><code>@InProceedings{qiao2023dynamic, 
+	author = {Yi-Ling Qiao and Alexander Gao and Yiran Xu and Yue Feng and Jia-Bin Huang and Ming Lin}, 
+	title = {Dynamic mesh-aware radiance fields}, 
+	booktitle = {ICCV}, 
+	year = {2023}, 
+}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/latent-diffusion-prior.gif" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://latent-diffusion-prior.github.io/" target="_blank">Text-driven Visual Synthesis with Latent Diffusion Prior</a> <br><a href="https://tinghliao.github.io/" target="_blank">Ting-Hsuan Liao</a>, <a href="https://songweige.github.io/" target="_blank">Songwei Ge</a>, Yiran Xu, <a href="https://yaochih.github.io/" target="_blank">Yao-Chih Lee</a>, <a href="https://badouralbahar.github.io/" target="_blank">Badour AlBahar</a>, <a href="https://jbhuang0604.github.io/" target="_blank">Jia-Bin Huang</a> <br><span style="font-style: italic;">arXiv.org</span>, 2023 <br><a href="https://latent-diffusion-prior.github.io/" target="_blank">Project Page</a> / <a href="https://arxiv.org/abs/2302.08510" target="_blank">Paper</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseliao2023text" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapseliao2023text"><div class="card card-body"><pre><code>@InProceedings{liao2023text, 
+	author = {Ting-Hsuan Liao and Songwei Ge and Yiran Xu and Yao-Chih Lee and Badour AlBahar and Jia-Bin Huang}, 
+	title = {Text-driven Visual Synthesis with Latent Diffusion Prior}, 
+	booktitle = {arXiv.org}, 
+	year = {2023}, 
+}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/videogan_teaser.gif" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://video-edit-gan.github.io/" target="_blank">Temporally Consistent Semantic Video Editing</a> <br>Yiran Xu, <a href="https://badouralbahar.github.io/" target="_blank">Badour AlBahar</a>, <a href="https://jbhuang0604.github.io/" target="_blank">Jia-Bin Huang</a> <br><span style="font-style: italic;">ECCV</span>, 2022 <br><a href="https://video-edit-gan.github.io/" target="_blank">Project Page</a> / <a href="https://arxiv.org/abs/2206.10590" target="_blank">Paper</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsexu2022temporally" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsexu2022temporally"><div class="card card-body"><pre><code>@InProceedings{xu2022temporally, 
+	author = {Yiran Xu and Badour AlBahar and Jia-Bin Huang}, 
+	title = {Temporally Consistent Semantic Video Editing}, 
+	booktitle = {ECCV}, 
+	year = {2022}, 
+}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/xoia.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://twizwei.github.io/bddoia_project/" target="_blank">Explainable Object-Induced Action Decision for Autonomous Vehicles</a> <br>Yiran Xu, <a href="https://www.linkedin.com/in/xiaoyinyang/" target="_blank">Xiaoyin Yang</a>, <a href="https://www.linkedin.com/in/lihang-gong/" target="_blank">Lihang Gong</a>, <a href="https://www.linkedin.com/in/hsuan-chu-lin/?locale=en_US" target="_blank">Hsuan-Chu Lin</a>, <a href="https://gina9726.github.io/" target="_blank">Tz-Ying Wu</a>, <a href="http://www.svcl.ucsd.edu/people/yunsheng/" target="_blank">Yunsheng Li</a>, <a href="http://www.svcl.ucsd.edu/~nuno/" target="_blank">Nuno Vasconcelos</a> <br><span style="font-style: italic;">CVPR</span>, 2020 <br><a href="https://twizwei.github.io/bddoia_project/" target="_blank">Project Page</a> / <a href="https://arxiv.org/abs/2003.09405" target="_blank">Paper</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsexu2020explainable" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsexu2020explainable"><div class="card card-body"><pre><code>@InProceedings{xu2020explainable, 
+	author = {Yiran Xu and Xiaoyin Yang and Lihang Gong and Hsuan-Chu Lin and Tz-Ying Wu and Yunsheng Li and Nuno Vasconcelos}, 
+	title = {Explainable Object-Induced Action Decision for Autonomous Vehicles}, 
+	booktitle = {CVPR}, 
+	year = {2020}, 
+}</pre></code></div></div> </div> </div> </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 3em; margin-bottom: 1em;">
+                    
+            <div class="col-sm-12" style="">
+                <h4>Homepage Template</h4>
+                <p>
+                    The template is from <a href="https://github.com/m-niemeyer/m-niemeyer.github.io" target="_blank">Michael Niemeyer</a>. <br>
+                </p>
+            </div>
+    
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div?
+    </div>
 
-{% include projects.html %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+</body>
 
-{% include experiences.html %}
+</html>
+    
