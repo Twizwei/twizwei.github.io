@@ -72,7 +72,7 @@ def get_author_dict():
         'Yunsheng Li': 'http://www.svcl.ucsd.edu/people/yunsheng/',
         }
 
-def generate_person_html(persons, connection=", ", make_bold=True, make_bold_name='Michael Niemeyer', add_links=True):
+def generate_person_html(persons, connection=", ", make_bold=True, make_bold_name='Yiran Xu', add_links=True):
     links = get_author_dict() if add_links else {}
     s = ""
     for p in persons:
@@ -81,8 +81,8 @@ def generate_person_html(persons, connection=", ", make_bold=True, make_bold_nam
             if string_part_i != "":
                 string_part_i += " "
             string_part_i += name_part_i
-        if string_part_i in links.keys():
-            string_part_i = f'<a href="{links[string_part_i]}" target="_blank">{string_part_i}</a>'
+        # if string_part_i in links.keys():
+        #     string_part_i = f'<a href="{links[string_part_i]}" target="_blank">{string_part_i}</a>'
         if make_bold and string_part_i == make_bold_name:
             string_part_i = f'<span style="font-weight: bold";>{make_bold_name}</span>'
         if p != persons[-1]:
@@ -102,6 +102,9 @@ def get_paper_entry(entry_key, entry):
 
     s += f"""{generate_person_html(entry.persons['author'])} <br>"""
     s += f"""<span style="font-style: italic;">{entry.fields['booktitle']}</span>, {entry.fields['year']} <br>"""
+    if 'tldr' in entry.fields.keys():
+        # make TL;DR bold, and make the text italic
+        s += f"""<span style="font-weight: bold;">TL;DR:</span> <span style="font-style: italic;">{entry.fields['tldr']}</span> <br>"""
 
     artefacts = {'html': 'Project Page', 'pdf': 'Paper', 'supp': 'Supplemental', 'video': 'Video', 'poster': 'Poster', 'code': 'Code'}
     i = 0
