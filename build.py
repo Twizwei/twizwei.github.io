@@ -14,7 +14,7 @@ def get_personal_data():
 					and my B.E. degree from <a href="https://en.scut.edu.cn/">South China University of Technology (SCUT)</a>, advised by Prof. <a href="https://sdgc.stanford.edu/person/junbo-zhang">Junbo Zhang</a>, respectively.
 				</p>
                 <p>
-                    My research interests lie in computer vision and machine learning, with a focus on generative models and their applications,
+                    My research interests lie in computer vision and deep learning, with a focus on generative models and their applications,
                     especially in <b>videos</b>.
                 </p>
                 <p>
