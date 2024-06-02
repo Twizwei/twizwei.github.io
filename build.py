@@ -92,14 +92,14 @@ def generate_person_html(persons, connection=", ", make_bold=True, make_bold_nam
     return s
 
 def get_paper_entry(entry_key, entry):
-    s = """<div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-5">"""
+    s = """<div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-4">"""
     if 'img' in entry.fields.keys():
         if entry.fields['img'].endswith('.mp4'):
             # autoplay video without controls
             s += f"""<video autoplay loop muted playsinline class="img-fluid img-thumbnail" alt="Project video" style="width: 100%; height: auto;"><source src="{entry.fields['img']}" type="video/mp4"></video>"""
         else:
             s += f"""<img src="{entry.fields['img']}" class="img-fluid img-thumbnail" alt="Project image">"""
-    s += """</div><div class="col-sm-7">"""
+    s += """</div><div class="col-sm-8">"""
 
     if 'award' in entry.fields.keys():
         s += f"""<a href="{entry.fields['html']}" target="_blank">{entry.fields['title']}</a> <span style="color: red;">({entry.fields['award']})</span><br>"""
@@ -220,7 +220,7 @@ def get_index_html():
     <div class="container" style="margin-top: 80px;">
         <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <div class="row" style="margin-top: 3em;">
                     <div class="col-sm-12" style="margin-bottom: 1em;">
                     <h3 class="display-4" style="text-align: center;"><span style="font-weight: bold;">{name[0]}</span> {name[1]}</h3>
@@ -234,7 +234,7 @@ def get_index_html():
                     </div>
                 </div>
                 <div class="row" style="margin-top: 1em;" id="publications">
-                    <div class="col-sm-12" style="">
+                    <div class="col-sm-13" style="">
                         <h4>Publications</h4>
                         {pub}
                     </div>
