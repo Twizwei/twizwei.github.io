@@ -195,7 +195,7 @@ def get_index_html():
 <body>
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="https://twizwei.github.io/">{name[0] + ' ' + name[1]}</a>
+        <a class="navbar-brand" href="https://twizwei.github.io/"><i class="fas fa-home"></i> {name[0] + ' ' + name[1]}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
