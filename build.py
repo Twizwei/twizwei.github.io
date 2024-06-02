@@ -108,7 +108,7 @@ def get_paper_entry(entry_key, entry):
         # make TL;DR bold, and make the text italic
         s += f"""<span style="font-weight: bold;">TL;DR:</span> <span style="font-style: italic;">{entry.fields['tldr']}</span> <br>"""
 
-    artefacts = {'html': 'Project Page', 'pdf': 'Paper', 'supp': 'Supplemental', 'video': 'Video', 'poster': 'Poster', 'code': 'Code'}
+    artefacts = {'html': 'Project Page', 'pdf': 'Paper', 'supp': 'Supplemental', 'video': 'Video', 'poster': 'Poster', 'code': 'Code', 'media': 'Media Coverage'}
     i = 0
     for (k, v) in artefacts.items():
         if k in entry.fields.keys():
