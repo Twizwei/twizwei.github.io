@@ -8,21 +8,22 @@ def get_personal_data():
     linkedin = "yiran-xu"
     bio_text = f"""
                 <p>
-                    I am a Ph.D candidate at <a href="https://umd.edu/">University of Maryland, College Park</a> 
-					working with Prof. <a href="https://filebox.ece.vt.edu/~jbhuang/">Jia-Bin Huang</a>. 
-					I obtained my M.S. degree from <a href="http://www.ece.ucsd.edu/">UC San Diego</a>, advised by Prof. <a href="http://www.svcl.ucsd.edu/~nuno/">Nuno Vasconcelos</a>, 
-					and my B.E. degree from <a href="https://en.scut.edu.cn/">South China University of Technology (SCUT)</a>, advised by Prof. <a href="https://sdgc.stanford.edu/person/junbo-zhang">Junbo Zhang</a>, respectively.
-				</p>
-                <p>
-                    My research interests lie in computer vision and deep learning, with a focus on generative models and their applications,
-                    especially in <b>videos</b>.
+                    Hi there, I'm Yiran Xu. I'm a CS Ph.D. candidate at the <a href="https://umd.edu/">University of Maryland, College Park</a> 
+                    working with Prof. <a href="https://filebox.ece.vt.edu/~jbhuang/">Jia-Bin Huang</a>. 
+                    Before this, I earned my M.S. from <a href="http://www.ece.ucsd.edu/">UC San Diego</a> under Prof. <a href="http://www.svcl.ucsd.edu/~nuno/">Nuno Vasconcelos</a>, 
+                    and my B.E. from <a href="https://en.scut.edu.cn/">South China University of Technology (SCUT)</a> 
+                    with Prof. <a href="https://sdgc.stanford.edu/person/junbo-zhang">Junbo Zhang</a>.
                 </p>
                 <p>
-                    I used to intern at <sup><img src="./assets/img/adobe_logo.png" width="15"/></sup><a href="https://research.adobe.com/">Adobe Research</a> and 
-                    <sup><img src="./assets/img/snapchat-logo.svg" width="20"/></sup><a href="https://research.snap.com/">Snap Research</a> and was lucky to collaborate with many talented researchers.
+                    My research interests are in computer vision and deep learning, focusing on generative models and their applications, especially in <b>videos</b>.
                 </p>
                 <p>
-                    I am also a rookie in photography. Check out some of my <a href="./gallery.html">photos</a>!
+                    I've interned at <sup><img src="./assets/img/adobe_logo.png" width="15"/></sup><a href="https://research.adobe.com/">Adobe Research</a> 
+                    and <sup><img src="./assets/img/snapchat-logo.svg" width="20"/></sup><a href="https://research.snap.com/">Snap Research</a>, 
+                    where I had the pleasure of collaborating with many talented researchers.
+                </p>
+                <p>
+                    I'm also a newbie in photography. Feel free to check out some of my <a href="./gallery.html">photos</a>!
                 </p>
                 <p>
                     <a href="./assets/other/bio.txt" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-graduation-cap"></i> Bio</a>
@@ -36,7 +37,7 @@ def get_personal_data():
     """
     footer = """
             <div class="col-sm-12" style="">
-                <h4>Homepage Template</h4>
+                <h6>Homepage Template</h6>
                 <p>
                     The template is from <a href="https://github.com/m-niemeyer/m-niemeyer.github.io" target="_blank">Michael Niemeyer</a>. <br>
                 </p>
@@ -59,7 +60,7 @@ def get_author_dict():
         'Yi-Ling Qiao': 'https://ylqiao.net/',
         'Alexander Gao': 'https://www.alexandergao.com/',
         'Yue Feng': 'https://yuefeng21.github.io/',
-        'Ming C. Lin': 'https://www.cs.umd.edu/~lin/',
+        'Ming Lin': 'https://www.cs.umd.edu/~lin/',
         'Ting-Hsuan Liao': 'https://tinghliao.github.io/',
         'Songwei Ge': 'https://songweige.github.io/',
         'Yao-Chih Lee': 'https://yaochih.github.io/',
@@ -77,7 +78,7 @@ def generate_person_html(persons, connection=", ", make_bold=True, make_bold_nam
     s = ""
     for p in persons:
         string_part_i = ""
-        for name_part_i in p.get_part('first') + p.get_part('last'): 
+        for name_part_i in p.get_part('first') + p.get_part('middle') + p.get_part('last'): 
             if string_part_i != "":
                 string_part_i += " "
             string_part_i += name_part_i
@@ -91,9 +92,14 @@ def generate_person_html(persons, connection=", ", make_bold=True, make_bold_nam
     return s
 
 def get_paper_entry(entry_key, entry):
-    s = """<div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3">"""
-    s += f"""<img src="{entry.fields['img']}" class="img-fluid img-thumbnail" alt="Project image">"""
-    s += """</div><div class="col-sm-9">"""
+    s = """<div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-5">"""
+    if 'img' in entry.fields.keys():
+        if entry.fields['img'].endswith('.mp4'):
+            # autoplay video without controls
+            s += f"""<video autoplay loop muted playsinline class="img-fluid img-thumbnail" alt="Project video" style="width: 100%; height: auto;"><source src="{entry.fields['img']}" type="video/mp4"></video>"""
+        else:
+            s += f"""<img src="{entry.fields['img']}" class="img-fluid img-thumbnail" alt="Project image">"""
+    s += """</div><div class="col-sm-7">"""
 
     if 'award' in entry.fields.keys():
         s += f"""<a href="{entry.fields['html']}" target="_blank">{entry.fields['title']}</a> <span style="color: red;">({entry.fields['award']})</span><br>"""
@@ -187,7 +193,31 @@ def get_index_html():
 </head>
 
 <body>
-    <div class="container">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="https://twizwei.github.io/">{name[0] + ' ' + name[1]}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#bio">Bio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#publications">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#misc">Miscellaneous</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+    <div class="container" style="margin-top: 80px;">
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
@@ -196,17 +226,35 @@ def get_index_html():
                     <h3 class="display-4" style="text-align: center;"><span style="font-weight: bold;">{name[0]}</span> {name[1]}</h3>
                     </div>
                     <br>
-                    <div class="col-md-10" style="">
+                    <div class="col-md-8 text-justify" style="" id="bio">
                         {bio_text}
                     </div>
-                    <div class="col-md-2" style="">
+                    <div class="col-md-4" style="">
                         <img src="assets/img/profile.JPG" class="img-thumbnail" width="280px" alt="Profile picture">
                     </div>
                 </div>
-                <div class="row" style="margin-top: 1em;">
+                <div class="row" style="margin-top: 1em;" id="publications">
                     <div class="col-sm-12" style="">
                         <h4>Publications</h4>
                         {pub}
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 1em;" id="service">
+                    <div class="col-sm-12" style="">
+                        <h4>Service</h4>
+                        Reviewer for CVPR'2022-2024, ICCV'2021-2023, ECCV'2022-2024, NeurIPS'2023, ICLR'2024, ICML'2024, WACV'2023-2024, ACCV'2024.
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 3em;" id="misc">
+                    <div class="col-sm-12" style="">
+                        <h4>Miscellaneous</h4>
+                        <p>My Chinese name is 许亦冉. 
+                        I was born in <a href="https://en.wikipedia.org/wiki/Hengyang">Hengyang</a>, China, also known as the “Wild Goose City” (雁城). 
+                        According to local tales, geese migrating south never go beyond Hengyang because they find the warmest weather here.
+                        </p>
+                        <p>
+                        I started working on computer vision because I wanted to build a makeup machine for my wife. Well...maybe not that simple.
+                        </p>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 3em; margin-bottom: 1em;">
@@ -214,7 +262,7 @@ def get_index_html():
                 </div>
             </div>
             <div class="col-md-1"></div>
-        </div?
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
