@@ -23,9 +23,6 @@ def get_personal_data():
                     where I had the pleasure of collaborating with many talented researchers.
                 </p>
                 <p>
-                    I'm also a newbie in photography. Feel free to check out some of my <a href="./gallery.html">photos</a>!
-                </p>
-                <p>
                     <a href="./assets/other/bio.txt" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-graduation-cap"></i> Bio</a>
                     <a href="./assets/pdf/Yiran_CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa fa-address-card fa-lg"></i> CV</a>
                     <a href="mailto:yiranx@umd.edu" style="margin-right: 5px"><i class="far fa-envelope-open fa-lg"></i> Mail</a>
@@ -248,12 +245,20 @@ def get_index_html():
                 <div class="row" style="margin-top: 3em;" id="misc">
                     <div class="col-sm-12" style="">
                         <h4>Miscellaneous</h4>
-                        <p>My Chinese name is 许亦冉. 
-                        I was born in <a href="https://en.wikipedia.org/wiki/Hengyang">Hengyang</a>, China, also known as the “Wild Goose City” (雁城). 
-                        According to local tales, geese migrating south never go beyond Hengyang because they find the warmest weather here.
+                        <p>
+                            My Chinese name is 许亦冉. 
+                            I was born in <a href="https://en.wikipedia.org/wiki/Hengyang">Hengyang</a>, China, also known as the “Wild Goose City” (雁城). 
+                            According to local tales, geese migrating south never go beyond Hengyang because they find the warmest weather here.
                         </p>
                         <p>
-                        I started working on computer vision because I wanted to build a makeup machine for my wife. Well...maybe not that simple.
+                            I have two cats, <a href="./assets/img/bai.jpeg">Bai (白)</a> and <a href="./assets/img/Michelle.jpg">Chelle (锈)</a>.
+                            They are important members who keep me company during my PhD journey.
+                        </p>
+                        <p>
+                            I started working on computer vision because I wanted to build a makeup machine for my wife. Well...maybe not that simple.
+                        </p>
+                        <p>
+                            I'm also a newbie in photography. Feel free to check out some of my <a href="./gallery.html">photos</a>!
                         </p>
                     </div>
                 </div>
