@@ -8,7 +8,7 @@ def get_personal_data():
     linkedin = "yiran-xu"
     bio_text = f"""
                 <p>
-                    Hi there, I'm Yiran Xu. I'm a CS Ph.D. candidate at the <a href="https://umd.edu/">University of Maryland, College Park</a> 
+                    I'm a CS Ph.D. candidate at the <a href="https://umd.edu/">University of Maryland, College Park</a> 
                     working with Prof. <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a>. 
                     Before this, I earned my M.S. from <a href="http://www.ece.ucsd.edu/">UC San Diego</a> under Prof. <a href="http://www.svcl.ucsd.edu/~nuno/">Nuno Vasconcelos</a>, 
                     and my B.E. from <a href="https://en.scut.edu.cn/">South China University of Technology (SCUT)</a> 
