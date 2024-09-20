@@ -18,11 +18,26 @@ def get_personal_data():
                     My research interests are in computer vision and deep learning, focusing on generative models and their applications, especially in <b>videos</b>.
                 </p>
                 <p>
-                    I've interned at <sup><img src="./assets/img/adobe_logo.png" width="15"/></sup><a href="https://research.adobe.com/">Adobe Research</a> 
+                    I've interned at <sup><img src="./assets/img/gdm_logos.svg" width="20"/></sup><a href="https://deepmind.google/">Google DeepMind</a>,
+                    <sup><img src="./assets/img/adobe_logo.png" width="15"/></sup><a href="https://research.adobe.com/">Adobe Research</a> 
                     and <sup><img src="./assets/img/snapchat-logo.svg" width="20"/></sup><a href="https://research.snap.com/">Snap Research</a>, 
                     where I had the pleasure of collaborating with many<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsecollaborator" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -4px;">talented researchers.</button>
                     <div class="collapse" id="collapsecollaborator">
                         <div class="card card-body">
+                                <p>
+                                    <sup><img src="./assets/img/gdm_logos.svg" width="35"/></sup> Google DeepMind (2024): 
+                                    <a href="https://sites.google.com/view/feng-yang">Feng Yang</a>,
+                                    <a href="https://research.google/people/yinxiaoli/?&type=google">Yinxiao Li</a>,
+                                    <a href="https://scholar.google.com/citations?user=fKBmhcUAAAAJ&hl=en">Luciano Sbaiz</a>,
+                                    <a href="https://scholar.google.com/citations?user=y0sdeykAAAAJ&hl=en">Junjie Ke</a>,
+                                    <a href="https://scholar.google.com/citations?user=j99nvycAAAAJ&hl=en">Miaosen Wang</a>,
+                                    <a href="https://scholar.google.com/citations?user=72jdrSUAAAAJ&hl=en">Hang Qi</a>,
+                                    <a href="https://sites.google.com/view/hanzhang">Han Zhang</a>,
+                                    <a href="https://jlezama.github.io/">Jose Lezama</a>,
+                                    <a href="https://faculty.ucmerced.edu/mhyang/">Ming-Hsuan Yang</a>,
+                                    <a href="https://www.irfanessa.gatech.edu/">Irfan Essa</a>,
+                                    <a href="https://scholar.google.com/citations?user=CSHNLDcAAAAJ&hl=en">Jesse Berent</a>.
+                                </p>
                                 <p>
                                     <sup><img src="./assets/img/adobe_logo.png" width="35"/></sup> Adobe Research (2023): 
                                     <a href="https://difanliu.github.io/">Difan Liu</a>,
