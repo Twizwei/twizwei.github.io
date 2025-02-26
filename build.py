@@ -123,8 +123,9 @@ def generate_person_html(persons, connection=", ", make_bold=True, make_bold_nam
             string_part_i += name_part_i
         # if string_part_i in links.keys():
         #     string_part_i = f'<a href="{links[string_part_i]}" target="_blank">{string_part_i}</a>'
-        if make_bold and string_part_i == make_bold_name:
-            string_part_i = f'<span style="font-weight: bold";>{make_bold_name}</span>'
+        if make_bold and (string_part_i == make_bold_name or make_bold_name in string_part_i):
+            # string_part_i = f'<span style="font-weight: bold";>{make_bold_name}</span>'
+            string_part_i = f'<span style="font-weight: bold";>{string_part_i}</span>'
         if p != persons[-1]:
             string_part_i += connection
         s += string_part_i
