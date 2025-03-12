@@ -147,7 +147,11 @@ def get_paper_entry(entry_key, entry):
         s += f"""<a href="{entry.fields['html']}" target="_blank">{entry.fields['title']}</a> <br>"""
 
     s += f"""{generate_person_html(entry.persons['author'])} <br>"""
+    if 'Cropper' in entry.fields['title']:
+        # Add an additional line to indicate "* means equal contribution"
+        s += """<span style="font-style: italic;">*: equal contribution</span> <br>"""
     s += f"""<span style="font-style: italic;">{entry.fields['booktitle']}</span>, {entry.fields['year']} <br>"""
+    
     if 'tldr' in entry.fields.keys():
         # make TL;DR bold, and make the text italic
         s += f"""<span style="font-weight: bold;">TL;DR:</span> <span style="font-style: italic;">{entry.fields['tldr']}</span> <br>"""
