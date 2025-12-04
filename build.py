@@ -155,7 +155,7 @@ def get_paper_entry(entry_key, entry):
         s += f"""<a href="{entry.fields['html']}" target="_blank">{entry.fields['title']}</a> <br>"""
 
     s += f"""{generate_person_html(entry.persons['author'])} <br>"""
-    if 'Cropper' or 'RELIC' in entry.fields['title']:
+    if 'Cropper' in entry.fields['title'] or 'RELIC' in entry.fields['title']:
         # Add an additional line to indicate "* means equal contribution"
         s += """<span style="font-style: italic;">*: equal contribution</span> <br>"""
     # Handle both conference papers (booktitle) and journal articles (journal)
