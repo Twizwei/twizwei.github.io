@@ -108,6 +108,16 @@ def get_author_dict():
         'Hsuan-Chu Lin': 'https://www.linkedin.com/in/hsuan-chu-lin/?locale=en_US',
         'Tz-Ying Wu': 'https://gina9726.github.io/',
         'Yunsheng Li': 'http://www.svcl.ucsd.edu/people/yunsheng/',
+        'Yicong Hong': 'https://yiconghong.me/',
+        'Yiqun Mei': 'https://yiqunmei.net/',
+        'Chongjian Ge': 'https://chongjiange.github.io/',
+        'Sai Bi': 'https://sai-bi.github.io/',
+        'Yannick Hold-Geoffroy': 'https://yannickhold.com/',
+        'Mike Roberts': 'https://mikeroberts3000.github.io/',
+        'Matthew Fisher': 'https://techmatt.github.io/',
+        'Kalyan Sunkavalli': 'http://www.kalyans.org/',
+        'Zhengqi Li': 'https://zhengqili.github.io/',
+        'Hao Tan': 'https://www.cs.unc.edu/~airsplay/',
         }
 
 def generate_person_html(persons, connection=", ", make_bold=True, make_bold_name='Yiran Xu', add_links=True):
@@ -148,7 +158,9 @@ def get_paper_entry(entry_key, entry):
     if 'Cropper' in entry.fields['title']:
         # Add an additional line to indicate "* means equal contribution"
         s += """<span style="font-style: italic;">*: equal contribution</span> <br>"""
-    s += f"""<span style="font-style: italic;">{entry.fields['booktitle']}</span>, {entry.fields['year']} <br>"""
+    # Handle both conference papers (booktitle) and journal articles (journal)
+    venue = entry.fields.get('journal', entry.fields.get('booktitle', 'Unknown'))
+    s += f"""<span style="font-style: italic;">{venue}</span>, {entry.fields['year']} <br>"""
     
     if 'tldr' in entry.fields.keys():
         # make TL;DR bold, and make the text italic
@@ -165,10 +177,17 @@ def get_paper_entry(entry_key, entry):
         else:
             print(f'[{entry_key}] Warning: Field {k} missing!')
 
-    cite = "<pre><code>@InProceedings{" + f"{entry_key}, \n"
+    # Determine entry type based on available fields
+    entry_type = "article" if 'journal' in entry.fields else "inproceedings"
+    cite = f"<pre><code>@{entry_type}" + "{" + f"{entry_key}, \n"
     cite += "\tauthor = {" + f"{generate_person_html(entry.persons['author'], make_bold=False, add_links=False, connection=' and ')}" + "}, \n"
-    for entr in ['title', 'booktitle', 'year']:
-        cite += f"\t{entr} = " + "{" + f"{entry.fields[entr]}" + "}, \n"
+    cite += f"\ttitle = " + "{" + f"{entry.fields['title']}" + "}, \n"
+    # Add journal or booktitle depending on entry type
+    if 'journal' in entry.fields:
+        cite += f"\tjournal = " + "{" + f"{entry.fields['journal']}" + "}, \n"
+    elif 'booktitle' in entry.fields:
+        cite += f"\tbooktitle = " + "{" + f"{entry.fields['booktitle']}" + "}, \n"
+    cite += f"\tyear = " + "{" + f"{entry.fields['year']}" + "}, \n"
     cite += """}</pre></code>"""
     s += " /" + f"""<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{entry_key}" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapse{entry_key}"><div class="card card-body">{cite}</div></div>"""
     s += """ </div> </div> </div>"""
